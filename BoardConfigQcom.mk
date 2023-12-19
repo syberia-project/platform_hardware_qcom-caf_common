@@ -212,3 +212,9 @@ endif
 ifneq ($(USE_DEVICE_SPECIFIC_DATASERVICES),true)
     PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/dataservices
 endif
+
+# Enable QTI sufraceflinger extensions for all qcom targets
+SOONG_CONFIG_NAMESPACES += qtidisplaycommonsys
+SOONG_CONFIG_qtidisplaycommonsys := displayextension composer3ext
+SOONG_CONFIG_qtidisplaycommonsys_displayextension := true
+SOONG_CONFIG_qtidisplaycommonsys_composer3ext := true
